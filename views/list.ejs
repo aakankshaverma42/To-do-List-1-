@@ -1,0 +1,19 @@
+<%- include('header'); -%>
+   <div class="box" id="heading">
+    <h1 style="color:rgb(252, 252, 252)">TASK FOR THE DAY</h1>
+    <h1> <%= listTitle %>  </h1>
+         </div>
+   
+    <div class="box">
+        <% for(var i=0;i<Newitemlist.length;i++){ %>
+            <div class="item">
+                <input type="checkbox">
+                <p><%=Newitemlist[i]%></p>
+            </div>
+           <% }%>
+           <form  class="item" action="/" method="post">
+            <input type="text" name="Newtask" placeholder="New Task" autocomplete="off">
+          <button type="submit" name="button" value=<%=listTitle %>">+</button>  
+        </form> 
+    </div> 
+    <%- include('footer'); -%> 
